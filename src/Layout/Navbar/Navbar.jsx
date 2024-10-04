@@ -19,7 +19,7 @@ function Navbar({ tab, setTab }) {
         className={'btn ' + (tab === 'calculator' ? 'btn-primary' : 'btn-outline-primary')}
         onClick={() => setTab('calculator')}
         >
-          cCalculator
+          Calculator
         </button>
       </Link>
       <Link to={'/todo'}>

@@ -3,8 +3,8 @@ import './Header.css'
 
 function Header() {
   return (
-    <div>
-      <h1>HEADER</h1>
+    <div className='header-container'>
+      <h1><span className='badge bg-dark'>CSI205 Front End Software Dev</span></h1>
     </div>
   )
 }

@@ -1,4 +1,8 @@
 .app-container{
     border: 1px dashed red;
     width: 1020px;
+
+    /* align-items: center;
+    display: flex;
+    justify-content: center; */
 }
