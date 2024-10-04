@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className='app-container'>
+    <div className='app-container bg-light'>
      <HashRouter>
       <Routes>
         <Route element={<Layout tab={tab} setTab={setTab}/>}>
