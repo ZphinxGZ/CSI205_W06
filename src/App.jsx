@@ -14,7 +14,11 @@ function App() {
     <div>
      <HashRouter>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route element={<Layout />}>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/home"} element={<Home />} />
+          <Route path={"/todo"} element={<Todo />} />
+        </Route>
       </Routes>
      </HashRouter>
     </div>
