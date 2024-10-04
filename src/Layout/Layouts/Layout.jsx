@@ -7,11 +7,11 @@ import Footer from '../Footer/Footer'
 
 import './Layout.css'
 
-function Layout() {
+function Layout({ tab, setTab }) {
   return (
     <div>
       <Header />
-      <Navbar />
+      <Navbar tab={tab} setTab={setTab}/>
       <Outlet />
       <Footer />
     </div>
