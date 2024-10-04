@@ -36,7 +36,7 @@ function Home() {
         </div>
 
         <div className='profile-item02 bg-secondary'>
-            <div>
+            <div className='profile-skills'>
               <h3 className='text-center mb-1'><span className='badge bg-dark text-danger'>Skills & Expertise</span></h3>
 
               <ul className='list-group'>
@@ -47,7 +47,7 @@ function Home() {
               </ul>
             </div>
 
-            <div>
+            <div className='profile-hobbies'>
               <h3 className='text-center mb-1'><span className='badge bg-dark text-danger'>Hobbies & Interests</span></h3>
               <ul className='list-group'>
                 <li className='list-group-item list-group-item-dark'>Coding & Side Projects</li>
