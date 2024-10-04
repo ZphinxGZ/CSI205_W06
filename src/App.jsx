@@ -3,6 +3,7 @@ import { HashRouter,Routes,Route } from 'react-router-dom'
 
 import Home from './page/home/Home'
 import Calculator from './page/Calculator/Calculator'
+import Component from './page/component/Component'
 import Todo from './page/Todo/Todo'
 import Layout from './Layout/Layouts/Layout'
 
@@ -27,8 +28,9 @@ function App() {
         <Route element={<Layout tab={tab} setTab={setTab}/>}>
           <Route path={"/"} element={<Home />} />
           <Route path={"/home"} element={<Home />} />
-          <Route path={"/todo"} element={<Todo />} />
           <Route path={"/calculator"} element={<Calculator />} />
+          <Route path={"/component"} element={<Component />} />
+          <Route path={"/todo"} element={<Todo />} />
         </Route>
       </Routes>
      </HashRouter>

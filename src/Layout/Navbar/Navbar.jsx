@@ -22,6 +22,14 @@ function Navbar({ tab, setTab }) {
           Calculator
         </button>
       </Link>
+      <Link to={'/component'}>
+        <button 
+        className={'btn ' + (tab === 'component' ? 'btn-primary' : 'btn-outline-primary')}
+        onClick={() => setTab('component')}
+        >
+          Component
+        </button>
+      </Link>
       <Link to={'/todo'}>
         <button 
         className={'btn ' + (tab === 'todo' ? 'btn-primary' : 'btn-outline-primary')}

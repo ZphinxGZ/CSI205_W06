@@ -1,6 +1,8 @@
 .app-container{
     border: 1px dashed red;
     width: 1020px;
+    margin: 1rem auto;
+    padding: 0.5rem;
 
     /* align-items: center;
     display: flex;
