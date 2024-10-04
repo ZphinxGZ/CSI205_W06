@@ -6,7 +6,6 @@ import Home from './page/home/Home'
 import Todo from './page/Todo/Todo'
 import Layout from './Layout/Layouts/Layout'
 
-
 import './App.css'
 
 function App() {
