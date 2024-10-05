@@ -10,7 +10,9 @@ function Component() {
   return (
     <div className='component-container rounded'>
       <div className='border border-2 border-danger p-2 componentcontainer'>
-        <h1 className='bg-dark text-light p-2 border border-danger rounded text-center'>React Component</h1>
+        <div className='bg-dark text-light p-2 border border-danger rounded text-center d-flex justify-content-center mb-2'>
+          <h1 className=''>React Component</h1>      
+        </div>
 
         <div className='container contain01 text-center'>
           <div className='contain02'>
@@ -23,10 +25,10 @@ function Component() {
         </div>
         
         <div className='container text-center container04'>
-          <Tempertures initCelsius={30} name={'Kunakorn'}/>
+          <Tempertures initCelsius={25} name={'Tempertures'}/>
         </div>
 
-        <div className='footer-name'>
+        <div className='d-flex justify-content-center footer-name'>
           <h2>นายคุณากร ขำเจริญ รหัส 66075070</h2>
         </div>
       </div>

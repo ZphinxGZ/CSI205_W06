@@ -21,6 +21,7 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
+    font-weight: bold;
 }
 .profile-img img{
     width: 200px;

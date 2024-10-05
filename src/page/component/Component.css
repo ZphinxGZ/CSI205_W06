@@ -1,6 +1,6 @@
 .component-container{
     border: 1px solid;
-    height: 800px;
+    height: 750px;
     background: #000;
     display: flex;
     justify-content: center;
@@ -12,11 +12,17 @@
     display: flex;
     gap: 0.5rem;
     width: 100%;
+    height: auto;
     justify-content: space-between;
 }
 
 .contain03 {
     width: 100%;
+    height: auto;
+}
+.contain04 {
+    width: 100%;
+    height: auto;
 }
 
 .componentcontainer {
@@ -40,4 +46,5 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid red;
+    height: auto;
 }
