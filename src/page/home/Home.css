@@ -20,7 +20,7 @@
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .profile-img img{
     width: 200px;
@@ -36,4 +36,10 @@
 }
 .profile-info{
     font-weight: bold;
+}
+.profile-skills{
+    width: 30rem;
+}
+.profile-hobbies{
+    width: 30rem;
 }
