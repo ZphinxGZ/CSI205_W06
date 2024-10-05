@@ -4,7 +4,8 @@ import './Calculator.css'
 function Calculator() {
   return (
     <div className='calculator-container rounded'>
-      <h1>CALCULATOR</h1>
+
+      <h1>Calculator</h1>
     </div>
   )
 }
