@@ -21,10 +21,12 @@ function Todo() {
     console.log(`currentPage = ${currentPage}`)
   },[currentPage])
 
+  // ***********
   useEffect(() => {
     // setCurrentPage((prev) => (prev > numPage ? numPage : prev))
     setCurrentPage(1)
   },[numPage])
+  // ***********
 
   useEffect(() => {
     console.log(`itemPerPage = ${itemPerPage}`)
