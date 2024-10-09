@@ -1,4 +1,12 @@
 .todo-container{
-    border: 1px solid;
-    height: 600px;
+    text-align: center;
+    padding: 0.5rem;
+}
+.todo-filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-space{
+    margin: 0 0.5rem;
 }
