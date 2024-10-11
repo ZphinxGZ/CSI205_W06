@@ -79,7 +79,11 @@ function Todo() {
             ref={onlyWaitingRef}
           />
           <label className='form-check-label' htmlFor='flexSwitchCheckChecked'>
-            Show only waiting
+            Show only &nbsp;
+            <button className='btn btn-warning'>
+              waiting &nbsp;
+              <span className='bi bi-clock'></span>
+            </button>
           </label>
         </div>
         <select
@@ -105,7 +109,12 @@ function Todo() {
           <tr>
             <th>ID</th>
             <th>Title</th>
-            <th style={{ textAlign: 'right' }}>Completed</th>
+            <th style={{ textAlign: 'right' }}>
+              Completed &nbsp;
+              <button className='btn btn-primary'>
+                <span className='bi bi-plus-lg'></span>
+              </button>
+            </th>
           </tr>
         </thead>
         <tbody>

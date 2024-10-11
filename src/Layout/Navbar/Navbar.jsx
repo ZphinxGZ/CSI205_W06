@@ -8,7 +8,7 @@ function Navbar({ tab, setTab }) {
 
       <Link to={'/home'}>
         <button 
-        className={'btn ' + (tab === 'home' ? 'btn-primary' : 'btn-outline-primary')} 
+        className={'btn ' + (tab === 'home' ? 'btn-danger' : 'btn-outline-danger')} 
         onClick={() => setTab('home')}
         >
           Home
@@ -16,7 +16,7 @@ function Navbar({ tab, setTab }) {
       </Link>
       <Link to={'/calculator'}>
         <button 
-        className={'btn ' + (tab === 'calculator' ? 'btn-primary' : 'btn-outline-primary')}
+        className={'btn ' + (tab === 'calculator' ? 'btn-danger' : 'btn-outline-danger')}
         onClick={() => setTab('calculator')}
         >
           Calculator
@@ -24,7 +24,7 @@ function Navbar({ tab, setTab }) {
       </Link>
       <Link to={'/component'}>
         <button 
-        className={'btn ' + (tab === 'component' ? 'btn-primary' : 'btn-outline-primary')}
+        className={'btn ' + (tab === 'component' ? 'btn-danger' : 'btn-outline-danger')}
         onClick={() => setTab('component')}
         >
           Component
@@ -32,7 +32,7 @@ function Navbar({ tab, setTab }) {
       </Link>
       <Link to={'/todo'}>
         <button 
-        className={'btn ' + (tab === 'todo' ? 'btn-primary' : 'btn-outline-primary')}
+        className={'btn ' + (tab === 'todo' ? 'btn-danger' : 'btn-outline-danger')}
         onClick={() => setTab('todo')}
         >
           Todo
