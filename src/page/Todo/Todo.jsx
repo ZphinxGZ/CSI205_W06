@@ -6,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import './Todo.css'
 import { Form } from 'react-bootstrap';
 
-const initItemsPerPage = 5
+const initItemsPerPage = 10
 const initOnlyWaiting = false
 
 function Todo() {
@@ -59,9 +59,7 @@ function Todo() {
     const todoSelected = todosRaw.find((todo)=>{
       return todo.id === id
     })
-
     todoSelected.completed = true
-    // setTodosRaw(todosRaw) //Doesn't work
     setTodosRaw([...todosRaw]) //force state update
   }
 
@@ -78,7 +76,6 @@ function Todo() {
 
   // modals
   const [show, setShow] = useState(false);
-
 
   const newIdRef = useRef()
   const newTitleRef = useRef()
@@ -138,11 +135,12 @@ function Todo() {
             const title = newTitleRef.current.value.trim()
             if(title === ''){
               alert('Title is not empty!!')
+
               newTitleRef.current.value = ''
               newTitleRef.current.focus()
             }else{
-               addClick(id, title)
-            handleClose()
+              addClick(id, title)
+              handleClose()
             }
           }}>
             <span className='bi bi-plus-lg'>
@@ -152,8 +150,6 @@ function Todo() {
           </Button>
         </Modal.Footer>
       </Modal>
-
-
 
       {/* filters */}
       <div className='todo-filters-container'>
@@ -198,9 +194,9 @@ function Todo() {
       <table className='table table-striped todo-table'>
         <thead className='table-dark'>
           <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th style={{ textAlign: 'right' }}>
+            <th style={{width:'10%'}} valign='middle'>ID</th>
+            <th valign='middle'>Title</th>
+            <th style={{ textAlign: 'right',width:'20%' }} valign='middle'>
               Completed &nbsp;
               <button className='btn btn-primary'
                 onClick={() => {
@@ -229,16 +225,16 @@ function Todo() {
           }).map((todo) => {
             return (
               <tr key={todo.id}>
-                <td>
+                <td valign='middle'>
                   <span
-                    className='badge bg-secondary'
-                    style={{ width: '2rem' }}
+                    className='badge bg-dark'
+                    style={{ width: '3rem' }}
                   >
                     {todo.id}
                   </span>
                 </td>
-                <td style={{ textAlign: 'left' }}>{todo.title}</td>
-                <td style={{ textAlign: 'right' }}>
+                <td style={{ textAlign: 'left' }} valign='middle'>{todo.title}</td>
+                <td style={{ textAlign: 'right' }} valign='middle'>
                   {todo.completed ? (
                     <span className='badge bg-success'>
                       done&nbsp;
