@@ -93,7 +93,21 @@ function Todo() {
           </tr>
         </thead>
         <tbody>
-          {todos.map((todo) => {
+          {
+            // itemperpage = 5
+            // curpage = 1
+            // item (human) => (1...5),(6...10),(11...15)
+            // items (jsx) => (min...max)
+            // min = (curpage - 1) * itemperpage
+            // max = curpage * itemperpage - 1
+          }
+
+          {todos.filter((todo,index) => {
+            const min = (curPage - 1) * itemsPerPage
+            const max = curPage * itemsPerPage - 1
+
+            return index >= min && index <= max
+          }).map((todo) => {
             return (
               <tr key={todo.id}>
                 <td>
