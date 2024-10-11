@@ -23,7 +23,7 @@ function Todo() {
 
     setOnlyWaiting(initOnlyWaiting)
     itemsPerPageRef.current.value = initItemsPerPage
-    
+
     setItemsPerPage(initItemsPerPage)
     onlyWaitingRef.current.checked = initOnlyWaiting
   }, [])
@@ -106,21 +106,6 @@ function Todo() {
                 </td>
                 <td style={{ textAlign: 'left' }}>{todo.title}</td>
                 <td style={{ textAlign: 'right' }}>
-                  {/* 
-                  <span
-                    className={
-                      'badge ' + (todo.completed ? 'bg-success' : 'bg-warning')
-                    }
-                  >
-                    {todo.completed ? 'done' : 'waiting'}
-                    &nbsp;
-                    <span
-                      className={
-                        'bi ' + (todo.completed ? 'bi-check' : 'bi-clock')
-                      }
-                    ></span>
-                  </span>
-                  */}
                   {todo.completed ? (
                     <span className='badge bg-success'>
                       done&nbsp;
