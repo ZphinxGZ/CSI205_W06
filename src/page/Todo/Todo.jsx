@@ -123,6 +123,7 @@ function Todo() {
 
         </tbody>
       </table>
+      
       {/* page control */}
       <div>
         <button 
