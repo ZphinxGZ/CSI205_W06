@@ -20,8 +20,10 @@ function Todo() {
 
   useEffect(() => {
     setTodosRaw(fetchTodos())
+
     setOnlyWaiting(initOnlyWaiting)
     itemsPerPageRef.current.value = initItemsPerPage
+    
     setItemsPerPage(initItemsPerPage)
     onlyWaitingRef.current.checked = initOnlyWaiting
   }, [])

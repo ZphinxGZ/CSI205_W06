@@ -1202,5 +1202,6 @@ const todos = [
 ]
 
 export function fetchTodos(){
-    return todos.slice(0, 27)
+    return todos.slice(0, 13)
+    // return []
 }
