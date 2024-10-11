@@ -46,6 +46,22 @@ function Todo() {
     else if (curPage > numPages) setCurPage(numPages)
   }, [numPages])
 
+  // events handler
+  const deleteClick = (id) => {
+    const todoRemain = todosRaw.filter((todo) => todo.id != id)
+
+    setTodosRaw(todoRemain) // update
+  }
+  const waitingClick = (id) => {
+    const todoSelected = todosRaw.find((todo)=>{
+      return todo.id === id
+    })
+
+    todoSelected.completed = true
+    setTodosRaw(todosRaw) //Doesn't work
+    setTodosRaw([...todosRaw]) //force state update
+  }
+
   return (
     <div className='todo-container'>
       {/* filters */}
@@ -126,13 +142,21 @@ function Todo() {
                       <span className='bi bi-check'></span>
                     </span>
                   ) : (
-                    <button className='btn btn-warning'>
+                    <button 
+                      className='btn btn-warning'
+                      onClick={() => {
+                        waitingClick(todo.id)
+                      }}>
                       waiting&nbsp;
                       <span className='bi bi-clock'></span>
                     </button>
                   )}
                   &nbsp;
-                  <button className='btn btn-danger'>
+                  <button 
+                    className='btn btn-danger'
+                    onClick={() => {
+                      deleteClick(todo.id)
+                    }}>
                     <span className='bi bi-trash'></span>
                   </button>
                 </td>
