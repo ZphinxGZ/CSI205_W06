@@ -58,7 +58,7 @@ function Todo() {
     })
 
     todoSelected.completed = true
-    setTodosRaw(todosRaw) //Doesn't work
+    // setTodosRaw(todosRaw) //Doesn't work
     setTodosRaw([...todosRaw]) //force state update
   }
 
