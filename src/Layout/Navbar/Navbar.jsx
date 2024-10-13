@@ -38,6 +38,14 @@ function Navbar({ tab, setTab }) {
           Todo
         </button>
       </Link>
+      <Link to={'/cart'}>
+        <button 
+        className={'btn ' + (tab === 'cart' ? 'btn-danger' : 'btn-outline-danger')}
+        onClick={() => setTab('cart')}
+        >
+          Cart
+        </button>
+      </Link>
       
     </div>
   )
