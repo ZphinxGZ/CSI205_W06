@@ -20,15 +20,13 @@ const initialTab = 'home'
 function App() {
   const [products,setProducts] = useState([])
   const [carts,setCarts] = useState([])
+
   useEffect(() => {
     setProducts(fetchProducts())
   },[])
   useEffect(() => {
     console.log(products)
   })
-
-  
-
  
   const [tab,setTab] = useState('')
   useEffect(() => {

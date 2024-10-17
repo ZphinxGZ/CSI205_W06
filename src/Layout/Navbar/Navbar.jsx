@@ -1,63 +1,80 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar({ tab, setTab, products, carts }) {
   return (
-    <div className='navbar-container'>
-
-      <Link to={'/home'}>
-        <button 
-        className={'btn ' + (tab === 'home' ? 'btn-danger' : 'btn-outline-danger')} 
-        onClick={() => setTab('home')}
+    <div className="navbar-container">
+      <Link to={"/home"}>
+        <button
+          className={
+            "btn " + (tab === "home" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("home")}
         >
           Home
         </button>
       </Link>
-      <Link to={'/calculator'}>
-        <button 
-        className={'btn ' + (tab === 'calculator' ? 'btn-danger' : 'btn-outline-danger')}
-        onClick={() => setTab('calculator')}
+      <Link to={"/calculator"}>
+        <button
+          className={
+            "btn " +
+            (tab === "calculator" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("calculator")}
         >
           Calculator
         </button>
       </Link>
-      <Link to={'/component'}>
-        <button 
-        className={'btn ' + (tab === 'component' ? 'btn-danger' : 'btn-outline-danger')}
-        onClick={() => setTab('component')}
+      <Link to={"/component"}>
+        <button
+          className={
+            "btn " + (tab === "component" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("component")}
         >
           Component
         </button>
       </Link>
-      <Link to={'/todo'}>
-        <button 
-        className={'btn ' + (tab === 'todo' ? 'btn-danger' : 'btn-outline-danger')}
-        onClick={() => setTab('todo')}
+      <Link to={"/todo"}>
+        <button
+          className={
+            "btn " + (tab === "todo" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("todo")}
         >
           Todo
         </button>
       </Link>
-      <Link to={'/products'}>
-        <button 
-        className={'btn ' + (tab === 'products' ? 'btn-danger' : 'btn-outline-danger')}
-        onClick={() => setTab('products')}
+      <Link to={"/products"}>
+        <button
+          className={
+            "btn " + (tab === "products" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("products")}
         >
           Products ({products.length})
         </button>
       </Link>
-      <Link to={'/cart'}>
-        <button 
-        className={'btn ' + (tab === 'cart' ? 'btn-danger' : 'btn-outline-danger')}
-        onClick={() => setTab('cart')}
+      <Link to={"/cart"}>
+        <button
+          className={
+            "position-relative btn " +
+            (tab === "cart" ? "btn-danger" : "btn-outline-danger")
+          }
+          onClick={() => setTab("cart")}
         >
-          Cart ({carts.length})
+          Cart
+          {carts.length > 0 && (
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+              {carts.length < 10 ? carts.length : "9+"}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          )}
         </button>
       </Link>
-      
-      
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
